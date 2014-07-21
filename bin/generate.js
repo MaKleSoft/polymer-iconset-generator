@@ -8,5 +8,6 @@ generate(srcDir, {
     dest: argv.dest && path.normalize(argv.dest),
     lib: argv.lib && path.normalize(argv.lib),
     name: argv.name,
-    size: argv.size
+    size: argv.size,
+    prefix: argv.prefix
 });
