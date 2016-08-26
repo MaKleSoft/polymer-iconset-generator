@@ -11,6 +11,8 @@ program
     .option("-s, --size <size>", "Icon size")
     .option("-p, --prefix <prefix>", "Prefix to be added to file names for icon names")
     .option("-o, --omit-prefix <prefix>", "Common filename prefix to be omitted from icon name")
+    .option("-c, --clean", "Wheather to clean the svg code via svgo")
+    .option("-m, --minify", "Wheather to minimize the svg code via svgo. (only works with --minimize)")
     // .action(generate)
     .parse(process.argv);
 
@@ -21,4 +23,4 @@ var opts = program.opts();
 // TODO: Remove as soon as it's fixed in commander
 opts.name = typeof opts.name === "function" ? undefined : opts.name;
 
-generate(program.args[0], opts);
+generate(program.args[0], opts).done();
