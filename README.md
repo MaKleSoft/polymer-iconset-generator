@@ -28,6 +28,8 @@ Options:
   -s, --size <size>           Icon size
   -p, --prefix <prefix>       Prefix to be added to file names for icon names
   -o, --omit-prefix <prefix>  Common filename prefix to be omitted from icon name
+  -c, --clean                 Wheather to clean the svg code via svgo
+  -m, --minify                Wheather to minimize the svg code via svgo. (only works with --minimize)
 ```
 
 ### As a node module
@@ -47,5 +49,7 @@ pig('some/path', {
     name: 'my-icon-set',
     size: 200,
     omitPrefix: 'icon-'
+}).then(function() {
+    console.log("done!");
 });
 ```
