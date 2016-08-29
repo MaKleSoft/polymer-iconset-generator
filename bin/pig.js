@@ -2,9 +2,10 @@
 
 var generate = require("../lib/generate");
 var program = require("commander");
+var util = require("../lib/util");
 
 program
-    .arguments("<dir>")
+    .arguments("<dir...>")
     .option("-d, --dest <path>", "File or directory path of target file")
     .option("-i, --import-path <path>", "Import path for iron-iconset-svg element")
     .option("-n, --name <name>", "Iconset name, if omitted, directory name will be used")
@@ -23,4 +24,6 @@ var opts = program.opts();
 // TODO: Remove as soon as it's fixed in commander
 opts.name = typeof opts.name === "function" ? undefined : opts.name;
 
-generate(program.args[0], opts).done();
+program.args.forEach(function(dir) {
+    generate(dir, util.extend({}, opts)).done();
+})
