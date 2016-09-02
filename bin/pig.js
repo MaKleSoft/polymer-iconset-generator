@@ -14,6 +14,7 @@ program
     .option("-o, --omit-prefix <prefix>", "Common filename prefix to be omitted from icon name")
     .option("-c, --clean", "Wheather to clean the svg code via svgo")
     .option("-m, --minify", "Wheather to minimize the svg code via svgo. (only works with --minimize)")
+    .option("-1, --monochrome", "Remove fill, stroke and class attributes as well as style elements")
     // .action(generate)
     .parse(process.argv);
 
