@@ -15,6 +15,7 @@ program
     .option("-c, --clean", "Wheather to clean the svg code via svgo")
     .option("-m, --minify", "Wheather to minimize the svg code via svgo. (only works with --minimize)")
     .option("-1, --monochrome", "Remove fill, stroke and class attributes as well as style elements")
+    .option("--comment <comment>", "Comment to add to the generated iconset file")
     // .action(generate)
     .parse(process.argv);
 
