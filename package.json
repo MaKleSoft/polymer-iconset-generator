@@ -2,7 +2,7 @@
   "name": "polymer-iconset-generator",
   "version": "0.3.0",
   "description": "A tool for generating polymer svg icon sets out of a folder of svg files",
-  "main": "lib/generate.js",
+  "main": "pig.js",
   "bin": {
     "polymer-iconset-generator": "bin/pig.js",
     "pig": "bin/pig.js"
