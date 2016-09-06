@@ -32,6 +32,7 @@ Options:
   -m, --minify                Wheather to minimize the svg code via svgo. (only works with --minimize)
   -1, --monochrome            Remove fill, stroke and class attributes as well as style elements
   --comment <comment>         Comment to add to the generated iconset file
+  --split                     Split mode. Generate svg files from iconset file
 ```
 
 ### As a node module
