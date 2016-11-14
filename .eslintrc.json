@@ -1,11 +1,14 @@
 {
-    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": "2015"
+    },
+    "extends": "infusionsoft/node",
     "env": {
+        "es6": true,
         "node": true
     },
     "rules": {
-        "no-console": "off",
-        "no-empty": ["error", { "allowEmptyCatch": true }],
-        "quotes": "error"
+        "require-jsdoc": "off",
+        "new-cap": "off"
     }
 }
